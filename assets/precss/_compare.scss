@@ -1,0 +1,335 @@
+@import "smart-grid";
+@import "project";
+
+.no-top-breadcrumbs{
+  margin-top: 45px;
+  @include medium-block{
+    margin-top: 30px;
+  }
+}
+.compare{
+  display: inline-flex;
+  border: 1px solid #E0E5F3;
+  max-width: 100%;
+  @include medium-block{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  &__left{
+    width: 210px;
+    @include medium-block{
+      width: 100%;
+    }
+  }
+  &__right{
+    width: calc(100% - 210px);
+    border-left: 1px solid #E0E5F3;
+    @include from(768px){
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    @include medium-block{
+      width: 100%;
+      border-left: none;
+    }
+  }
+  &-item{
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    @include medium-block{
+      width: 100%;
+      flex-direction: row;
+    }
+    &__wrap:not(:first-child){
+      border-left: 1px solid #E0E5F3;
+    }
+    &__bottom{
+      margin-top: 15px;
+    }
+    &__bottom-block{
+      padding-top: 45px;
+      @include medium-block{
+        padding-left: 50%;
+        padding-top: 0;
+        margin-top: 30px;
+      }
+    }
+    &__image{
+      display: block;
+      text-align: center;
+      img{
+        height: 132px;
+        @include medium-block{
+          height: 80px;
+        }
+      }
+    }
+    &__link{
+      margin-bottom: auto;
+      @include medium-block{
+        margin-top: auto;
+        margin-right: 15px;
+        width: calc(50% - 15px);
+      }
+    }
+  }
+  &__col{
+    padding: 25px 20px 20px;
+    border-bottom: 1px solid #E0E5F3;
+    @include medium-block{
+      height: auto !important;
+      padding: 15px;
+    }
+  }
+  &-control{
+    display: flex;
+    align-items: center;
+    @include medium-block{
+      justify-content: center;
+    }
+  }
+  &__clear{
+    background: #F5F9FF;
+    cursor: pointer;
+    color: #839ABA;
+    @include din;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    padding: 20px 20px 19px;
+    text-align: center;
+    @include transition;
+    &:hover{
+      color: #4F6787;
+    }
+  }
+  &__owl{
+    .product-compare__name{
+      margin-bottom: 10px;
+      @include medium-block{
+        display: none;
+      }
+    }
+    &.owl-carousel{
+      @include from(768px){
+        display: flex;
+      }
+    }
+    .owl-nav, .owl-dots{
+      display: none;
+    }
+  }
+  &__wrap{
+    width: 100%;
+  }
+  &__bottom{
+    @include medium-block{
+      position: absolute;
+      width: 50%;
+      background: #ffffff;
+      bottom: 0;
+      z-index: 2;
+      &.empty-compare{
+        position: static;
+      }
+    }
+  }
+}
+.parameters-option{
+  margin-bottom: 30px;
+  @include medium-block{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-bottom: 10px;
+  }
+}
+.parameters-headline{
+  @include din;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 14px 20px 15px;
+  height: 45px;
+  @include medium-block{
+    margin-right: -100%;
+    background: #DDEBFD;
+    font-size: 12px;
+    padding: 8px 15px;
+    line-height: 14px;
+    height: 30px;
+  }
+}
+.parameter-name{
+  line-height: 14px;
+  font-size: 12px;
+  padding: 2px 20px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  @include medium-block{
+    padding: 2px 15px;
+    height: 30px;
+  }
+}
+.parameter-value{
+  line-height: 14px;
+  font-size: 12px;
+  padding: 2px 20px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  @include medium-block{
+    padding: 2px 15px;
+    height: 30px;
+  }
+}
+.parameter-option{
+  color: #748AA9;
+  font-size: 14px;
+  line-height: 15px;
+  @include din;
+  position: relative;
+  cursor: pointer;
+  @include medium-block{
+    margin-left: 20px;
+  }
+  &:before{
+    content: '';
+    display: inline-block;
+    border: 1px solid #C3CEDE;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 9px;
+  }
+  & + &{
+    margin-top: 9px;
+    @include medium-block{
+      margin-top: 0;
+    }
+  }
+  &.active{
+    color: #646464;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      background: #68A5FF;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+  }
+}
+.no-information{
+  color: #8F8F8F;
+}
+.differences{
+  &.hide{
+    display: none;
+  }
+}
+.slider-nav{
+  border-bottom: 1px solid #DCEAFD;
+  border-left: 1px solid #DCEAFD;
+  border-right: 1px solid #DCEAFD;
+  .uk-active &{
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  @include medium-block{
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #68A5FF;
+    margin-bottom: 0;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+  }
+  .custom-prev-btn{
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    &:before{
+      content: '';
+      background: url("../images/compare-slider-arrow.svg") 0 0 no-repeat;
+      width:8px;
+      height:13px;
+    }
+    span{
+      display: none;
+    }
+  }
+  .custom-next-btn{
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    &:before{
+      content: '';
+      background: url("../images/compare-slider-arrow.svg") 0 -13px no-repeat;
+      width:8px;
+      height:13px;
+    }
+    span{
+      display: none;
+    }
+  }
+}
+.compare__owl_name--wrap{
+  width: 100%;
+  @include from(768px){
+    display: none !important;
+  }
+}
+.product-compare__name{
+  color: #000;
+  font-family: 'DINAlternate';
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+  @include medium-block{
+    margin-bottom: 0;
+    align-self: center;
+    color: #68A5FF;
+  }
+}
+.compare__owl_name{
+  width: calc(100% + 42px);
+  margin-left: -21px;
+  margin-right: -21px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #fff;
+  .uk-active &{
+    border-bottom: 1px solid #DCEAFD;
+  }
+  .owl-nav, .owl-dots{
+    display: none;
+  }
+}
+.width-100, .compare-sticky{
+  width: 100%;
+}
+.compare-sticky{
+  z-index: 999;
+  position: relative;
+}

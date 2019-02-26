@@ -1,0 +1,100 @@
+/* Здесь переменные и миксины */
+
+$color_black: #3B3B3B;
+$color_gray: #717171;
+$color_yellow: #FFE544;
+$color_dark-yellow: #EECD00;
+$color_blue: #68A5FF;
+$blue-border: #DCEAFD;
+
+@mixin video-adapt{
+  position:relative;
+  padding-bottom:56.24%;
+  height:0;
+  overflow:hidden;
+  &>iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+}
+@mixin din{
+  font-family: 'DINAlternate';
+}
+@mixin transition{
+  transition: all 0.3s ease 0s;
+}
+@mixin box-shadow{
+  box-shadow: 0 10px 30px rgba(118, 173, 255, 0.18);
+}
+@mixin inputText{
+  &[type="text"], &[type="email"], &[type="tel"], &[type="password"]{
+    &::-webkit-input-placeholder {color:lighten(#252525,45%); opacity: 1;}
+    &::-moz-placeholder          {color:lighten(#252525,45%); opacity: 1;}
+    &:-moz-placeholder           {color:lighten(#252525,45%); opacity: 1;}
+    &:-ms-input-placeholder      {color:lighten(#252525,45%); opacity: 1;}
+
+    &[placeholder]:focus::-webkit-input-placeholder {color:transparent;}
+    &[placeholder]:focus::-moz-placeholder          {color:transparent;}
+    &[placeholder]:focus:-moz-placeholder           {color:transparent;}
+    &[placeholder]:focus:-ms-input-placeholder      {color:transparent;}
+    font-family: inherit;
+    width: 100%;
+  }
+}
+@mixin textarea{
+  &::-webkit-input-placeholder {color:lighten(#252525,45%); opacity: 1;}
+  &::-moz-placeholder          {color:lighten(#252525,45%); opacity: 1;}
+  &:-moz-placeholder           {color:lighten(#252525,45%); opacity: 1;}
+  &:-ms-input-placeholder      {color:lighten(#252525,45%); opacity: 1;}
+
+  &[placeholder]:focus::-webkit-input-placeholder {color:transparent;}
+  &[placeholder]:focus::-moz-placeholder          {color:transparent;}
+  &[placeholder]:focus:-moz-placeholder           {color:transparent;}
+  &[placeholder]:focus:-ms-input-placeholder      {color:transparent;}
+  font-family: inherit;
+  width: 100%;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
+  
+	$k: ($f-max - $f-min)/($w-max - $w-min);
+	$b: $f-min - $k * $w-min;
+
+	$b: $b + $units;
+
+	@return calc( #{$k} * 100vw + #{$b} );
+}
+
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+  
+  font-size: $f-min;
+  
+  @media (min-width: $w-min) {
+    @if ($fallback) {
+      font-size: $fallback;
+    }
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);  
+  }
+  @media (min-width: $w-max) {
+    font-size: $f-max;
+  }
+}
+
+//.fluid-font-size {
+//  @include fluidFontSize(16px, 24px, 480px, 1280px, 18px);
+//}
