@@ -1,0 +1,234 @@
+@import "smart-grid";
+@import "project";
+
+/* Здесь стили для страниц не магазина - список статей, статья c сайдбаром справа, страница с сайдбаром, контакты*/
+
+.articles{
+  @include row-flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  &-item{
+    @include col;
+    @include size(5);
+    @include size-Xlarge(5);
+    @include size-Xsmall(10);
+    padding: 40px 40px 34px;
+    border: 1px solid $blue-border;
+    margin-bottom: 30px;
+    @include Xlarge-block{
+      padding: 20px 20px 14px;
+      margin-bottom: 20px;
+    }
+    @include medium-block{
+      padding: 15px;
+    }
+    &__date{
+      display: block;
+      color: #AAAAAA;
+      @include din;
+      font-size: 10px;
+      line-height: 11px;
+      margin: 26px 0 8px;
+      @include medium-block{
+        margin: 20px 0 11px;
+      }
+    }
+    &__headline{
+      display: block;
+      @include din;
+      font-size: 22px;
+      line-height: 30px;
+      @include medium-block{
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    &:hover{
+      text-decoration: none;
+    }
+    &__img{
+      text-align: center;
+      display: block;
+    }
+  }
+  &__pagination-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 80px;
+    @include medium-block{
+      margin-bottom: 50px;
+    }
+  }
+}
+.with-right-sidebar{
+  @include row-flex;
+  margin-bottom: 30px;
+  @include medium-block{
+    margin-bottom: 20px;
+  }
+}
+.one-article{
+  @include col;
+  @include size(7.5);
+  @include size-Xlarge(7.5);
+  @include size-medium(10);
+  padding-right: 40px;
+  @include Xmedium-block{
+    padding-right: 0;
+  }
+  @include medium-block{
+    margin-bottom: 50px;
+  }
+}
+.text-formatting{
+  p, ul, ol, dl, blockquote, pre, address, fieldset, figure{
+    font-size: 15px;
+    line-height: 30px;
+    @include medium-block{
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  @include medium-block{
+    line-height: 20px;
+  }
+  &>*:last-child{
+    margin-bottom: 0;
+  }
+  ul{
+    list-style: none;
+    padding-left: 0;
+    li{
+      position: relative;
+      padding-left: 30px;
+      @include medium-block{
+        padding-left: 14px;
+      }
+      &:before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 12px;
+        background: $color_yellow;
+        @include medium-block{
+          width: 5px;
+          height: 5px;
+          top: 7px;
+        }
+      }
+    }
+  }
+  ol {
+    counter-reset: item;
+    padding-left: 30px;
+    @include medium-block{
+      padding-left: 14px;
+    }
+    li {
+      display: block;
+      position: relative;
+      &:before {
+        content: counters(item, ".")".";
+        counter-increment: item;
+        position: absolute;
+        margin-right: 100%;
+        right: 18px;
+        @include medium-block{
+          right: 5px;
+        }
+      }
+    }
+    ol{
+      margin-left: 12px;
+    }
+  }
+}
+.right-sidebar{
+  @include col;
+  @include size(2.5);
+  @include size-Xlarge(2.5);
+  @include size-medium(10);
+}
+.article-module{
+  &__item{
+    display: block;
+    border: 1px solid $blue-border;
+    padding: 15px;
+    & + &{
+      margin-top: 10px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__img{
+    display: block;
+    text-align: center;
+  }
+  &__date{
+    display: block;
+    @include din;
+    color: #AAAAAA;
+    font-size: 10px;
+    line-height: 11px;
+    margin: 18px 0 11px;
+  }
+  &__headline{
+    @include din;
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+  }
+}
+.with-left-sidebar{
+  @include row-flex;
+}
+.left-sidebar{
+  @include col;
+  @include size(2);
+  @include size-Xlarge(2);
+  @include size-large(2.5);
+  @include medium-block{
+    display: none;
+  }
+}
+.sidebar-menu{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  &_first-link{
+    display: block;
+    @include din;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    border-left: 4px solid transparent;
+    padding: 10px 10px 9px 26px;
+    &:hover{
+      text-decoration: none;
+    }
+    &.active{
+      color: #535144;
+      border-color: $color_yellow;
+    }
+  }
+}
+.article-on-right{
+  @include col;
+  @include size(8);
+  @include size-Xlarge(8);
+  @include size-large(7.5);
+  @include size-medium(10);
+  padding-left: 60px;
+  margin-bottom: 80px;
+  @include Xlarge-block{
+    padding-left: 0;
+  }
+  @include medium-block{
+    margin-bottom: 30px;
+  }
+}
