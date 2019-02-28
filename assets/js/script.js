@@ -519,7 +519,6 @@ $(document).ready(function () {
         $('.order-block').addClass('active');
         $(this).addClass('noactive');
     });
-
 });
 
 /* Запуск каресели на странице Сравнения для Mobile */
@@ -603,4 +602,3 @@ $(window).bind("load", function() {
         count_checked();
         $('.show-more-chekbox input[type="checkbox"]').on('change', count_checked );
 });
-

@@ -59,7 +59,9 @@
     @include row-flex;
     margin-bottom: 20px;
     @include medium-block{
-      margin-bottom: 64px;
+      &__product{
+        margin-bottom: 64px;
+      }
       padding-top: 20px;
     }
   }

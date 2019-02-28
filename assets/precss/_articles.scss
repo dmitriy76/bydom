@@ -232,3 +232,164 @@
     margin-bottom: 30px;
   }
 }
+.map-block{
+  height: 550px;
+  @include medium-block{
+    display: none;
+  }
+}
+.map-menu{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px;
+  border-bottom: 2px solid #DCEAFD;
+  @include medium-block{
+    display: none;
+  }
+  &__link{
+    display: none;
+  }
+  &__li{
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  a{
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      border-bottom: 2px solid #FFE544;
+    
+    }
+  }
+}
+
+.active a{
+  &:before{
+    opacity: 1;
+  }
+}
+.submenuya{
+  padding: 0;
+  list-style: none;
+  &-li{
+    & + &{
+      position: absolute;
+      left: -20000px;
+    }
+  }
+  &-link{
+    @include transition;
+    display: block;
+    padding: 12px 0 16px;
+    @include din;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 14px;
+    position: relative;
+    &:hover{
+      text-decoration: none;
+      color: #535144;
+    }
+  }
+}
+.balloon{
+  &-row{
+    display: flex;
+    width: 280px;
+  }
+  &-left{
+    min-width: 45px;
+    width: 45px;
+    margin-right: 15px;
+  }
+  &-address{
+    @include din;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  &-schedule{
+    color: #898989;
+    @include din;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  &-connect{
+    @include din;
+    font-size: 13px;
+    line-height: 15px;
+    span{
+      display: block;
+      margin-top: 2px;
+    }
+    a{
+      font-size: 12px;
+    }
+  }
+  &-photo__signature{
+    text-align: center;
+    color: #68A5FF;
+    @include din;
+    font-size: 12px;
+    text-transform: lowercase;
+    margin-top: 5px;
+  }
+}
+.our-stores{
+  display: none;
+  padding-left: 0;
+  list-style: none;
+  @include medium-block{
+    display: block;
+  }
+  &__item{
+    display: flex;
+    padding: 20px 10px 15px;
+    border: 1px solid $blue-border;
+    & + &{
+      border-top: none;
+    }
+  }
+  &__left{
+    min-width: 45px;
+    width: 45px;
+    margin: 0 15px 0 0;
+  }
+  &__photo-signature{
+    text-align: center;
+    color: #68A5FF;
+    @include din;
+    font-size: 12px;
+    text-transform: lowercase;
+    margin-top: 5px;
+  }
+  &-address{
+    @include din;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  &-schedule{
+    color: #898989;
+    @include din;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  &-connect{
+    @include din;
+    font-size: 13px;
+    line-height: 15px;
+    span{
+      display: block;
+      margin-top: 2px;
+    }
+    a{
+      font-size: 12px;
+    }
+  }
+}
