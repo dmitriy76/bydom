@@ -1,0 +1,69 @@
+{
+  "center": [
+    53.902496, 27.561481
+  ],
+  "results": {
+    "г. Минск": [{
+      "id": "1",
+      "pagetitle": "г. Минск, ул. Матусевича, 64",
+      "content": "<div class=\"balloon-row\"><a data-fancybox=\"minsk\" class=\"balloon-left our-stores__photo\" href=\"/assets/img/magazin_santehniki.jpg\"><img src=\"/assets/img/matus.jpg\" alt=\"\"><span class=\"balloon-photo__signature\">Фото</span></a><div class=\"balloon-right\"><div class=\"balloon-address\">г. Минск, ул. Матусевича, 64</div><div class=\"balloon-schedule\">09:00 — 21:00 (без выходных)</div><div class=\"balloon-connect\"><span>+375 (33) 666-05-81</span><span>+375 (29) 666-05-81</span><span><a href=\"mailto:azuretorg@gmail.com\">azuretorg@gmail.com</a></span></div></div></div>",
+      "region": "г. Минск и Минская область",
+      "map": [
+        53.917729, 27.457285
+      ],
+      "city": "г. Минск"
+    },{
+      "id": "2",
+      "pagetitle": "г. Минск, ул. Сурганова, 76",
+      "content": "<div class=\"balloon-row\"><a data-fancybox=\"minsk\" class=\"balloon-left our-stores__photo\" href=\"/assets/img/magazin_santehniki.jpg\"><img src=\"/assets/img/matus.jpg\" alt=\"\"><span class=\"balloon-photo__signature\">Фото</span></a><div class=\"balloon-right\"><div class=\"balloon-address\">г. Минск, ул. Матусевича, 64</div><div class=\"balloon-schedule\">09:00 — 21:00 (без выходных)</div><div class=\"balloon-connect\"><span>+375 (33) 666-05-81</span><span>+375 (29) 666-05-81</span><span><a href=\"mailto:azuretorg@gmail.com\">azuretorg@gmail.com</a></span></div></div></div>",
+      "region": "г. Минск и Минская область",
+      "map": [
+        53.930634, 27.581082
+      ],
+      "city": "г. Минск"
+    },{
+      "id": "3",
+      "pagetitle": "г. Минск, Строительный рынок \"Уручье\", ул. Уручская, 19 пав.№П-201Е (центральная аллея)",
+      "content": "<div class=\"balloon-row\"><a data-fancybox=\"minsk\" class=\"balloon-left our-stores__photo\" href=\"/assets/img/magazin_santehniki.jpg\"><img src=\"/assets/img/matus.jpg\" alt=\"\"><span class=\"balloon-photo__signature\">Фото</span></a><div class=\"balloon-right\"><div class=\"balloon-address\">г. Минск, ул. Матусевича, 64</div><div class=\"balloon-schedule\">09:00 — 21:00 (без выходных)</div><div class=\"balloon-connect\"><span>+375 (33) 666-05-81</span><span>+375 (29) 666-05-81</span><span><a href=\"mailto:azuretorg@gmail.com\">azuretorg@gmail.com</a></span></div></div></div>",
+      "region": "г. Минск и Минская область",
+      "map": [
+        53.954511, 27.691533
+      ],
+      "city": "г. Минск"
+    }
+    ],
+    "г. Гомель": [{
+      "id": "4",
+      "pagetitle": "г. Гомель, ул. Крестьянская, 30",
+      "content": "<div class=\"balloon-row\"><a data-fancybox=\"gomel\" class=\"balloon-left our-stores__photo\" href=\"/assets/img/magazin_santehniki.jpg\"><img src=\"/assets/img/matus.jpg\" alt=\"\"><span class=\"balloon-photo__signature\">Фото</span></a><div class=\"balloon-right\"><div class=\"balloon-address\">г. Минск, ул. Матусевича, 64</div><div class=\"balloon-schedule\">09:00 — 21:00 (без выходных)</div><div class=\"balloon-connect\"><span>+375 (33) 666-05-81</span><span>+375 (29) 666-05-81</span><span><a href=\"mailto:azuretorg@gmail.com\">azuretorg@gmail.com</a></span></div></div></div>",
+      "region": "г.Гомель и Гомельская область",
+      "map": [
+        52.425758, 31.004112
+      ],
+      "city": "г. Гомель"
+    }
+    ],
+    "г. Витебск": [{
+      "id": "6",
+      "pagetitle": "г. Витебск, ТЦ \"Энергия\" ул. Софьи Панковой, 2 пав. №27",
+      "content": "<div class=\"balloon-row\"><a data-fancybox=\"vitebsk\" class=\"balloon-left our-stores__photo\" href=\"/assets/img/magazin_santehniki.jpg\"><img src=\"/assets/img/matus.jpg\" alt=\"\"><span class=\"balloon-photo__signature\">Фото</span></a><div class=\"balloon-right\"><div class=\"balloon-address\">г. Минск, ул. Матусевича, 64</div><div class=\"balloon-schedule\">09:00 — 21:00 (без выходных)</div><div class=\"balloon-connect\"><span>+375 (33) 666-05-81</span><span>+375 (29) 666-05-81</span><span><a href=\"mailto:azuretorg@gmail.com\">azuretorg@gmail.com</a></span></div></div></div>",
+      "region": "г.Гродно",
+      "map": [
+        55.188527, 30.251849
+      ],
+      "city": "г. Витебск"
+    }
+    ],
+    "г. Могилев": [{
+      "id": "7",
+      "pagetitle": "г. Могилёв, ТЦ \"Строймаркет\" ул. Чайковского, 8 пав. №76",
+      "content": "<div class=\"balloon-row\"><a data-fancybox=\"mogilev\" class=\"balloon-left our-stores__photo\" href=\"/assets/img/magazin_santehniki.jpg\"><img src=\"/assets/img/matus.jpg\" alt=\"\"><span class=\"balloon-photo__signature\">Фото</span></a><div class=\"balloon-right\"><div class=\"balloon-address\">г. Минск, ул. Матусевича, 64</div><div class=\"balloon-schedule\">09:00 — 21:00 (без выходных)</div><div class=\"balloon-connect\"><span>+375 (33) 666-05-81</span><span>+375 (29) 666-05-81</span><span><a href=\"mailto:azuretorg@gmail.com\">azuretorg@gmail.com</a></span></div></div></div>",
+      "region": "г.Гродно",
+      "map": [
+        53.876957, 30.334348
+      ],
+      "city": "г. Могилёв"
+    }
+    ]
+  }
+}

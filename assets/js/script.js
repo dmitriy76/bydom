@@ -519,6 +519,14 @@ $(document).ready(function () {
         $('.order-block').addClass('active');
         $(this).addClass('noactive');
     });
+
+    $(function() {
+        $(".bydom__city").click(function(e) {
+            e.preventDefault();
+            $(".bydom__city").removeClass('active');
+            $(this).addClass('active');
+        })
+    });
 });
 
 /* Запуск каресели на странице Сравнения для Mobile */
@@ -601,4 +609,64 @@ $(window).bind("load", function() {
         };
         count_checked();
         $('.show-more-chekbox input[type="checkbox"]').on('change', count_checked );
+});
+
+/* -------- Настройки яндекс карты на странице Наши магазины -------------- */
+
+$(document).ready(function () {
+    $.getJSON("data.json", function (yaPoints) {
+        ymaps.ready(function () {
+            var yaMap = new ymaps.Map("shops-map", {
+                center: yaPoints.center,
+                controls: ["default"],
+                zoom: 7
+            });
+
+            var yaMapCollection = new ymaps.GeoObjectCollection();
+            yaMapCollection.removeAll();
+
+            function addPoints(points) {
+                $.each(points, function (is, shop) {
+                    var myPlacemark = new ymaps.Placemark(shop.map, {
+                        balloonContentBody: "<span onclick=\"yaMap.balloon.close();\" class='balloon-close'></span>" + shop.content
+                    }, {
+                        balloonShadow: false,
+                        hideIconOnBalloonOpen: false,
+                        balloonCloseButton: false,
+                        iconLayout: "default#image",
+                        iconImageHref: "/assets/images/marker.svg",
+                        balloonOffset: [0, -45],
+                        iconImageSize: [32, 32]
+                    });
+                    yaMapCollection.add(myPlacemark);
+                });
+            }
+
+            $.each(yaPoints.results, function (city, points) {
+                addPoints(points);
+            });
+            yaMap.geoObjects.add(yaMapCollection);
+            yaMap.setCenter(yaPoints.center);
+            yaMap.behaviors.disable("scrollZoom");
+
+            $(".baloon__close").on("click", function (e) {
+                e.preventDefault();
+                yaMap.balloon.close();
+            });
+
+            $(".bydom__city").on("click", function (e) {
+                e.preventDefault();
+                var city = $(this).data("city");
+                yaMapCollection.removeAll();
+                addPoints(yaPoints.results[city]);
+
+                yaMap.geoObjects.add(yaMapCollection);
+                yaMap.setCenter(yaPoints.results[city][0].map);
+                yaMap.behaviors.disable("scrollZoom");
+                $("html, body").animate({scrollTop: $("#shops-map").offset().top});
+            });
+            window.yaMap = yaMap;
+        });
+
+    });
 });
