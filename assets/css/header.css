@@ -1345,6 +1345,7 @@ textarea[placeholder]:focus:-ms-input-placeholder {
   height: 50px;
   -o-object-fit: contain;
   object-fit: contain;
+  font-family: 'object-fit: contain';
   margin-right: 20px;
 }
 

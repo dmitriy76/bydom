@@ -1,5 +1,6 @@
 @import "smart-grid";
 @import "project";
+
 .slider-and-product_day {
   @include row-flex;
   margin-top: 30px;
@@ -20,6 +21,9 @@
   }
 }
 .product_day {
+  @include from(1024px){
+    min-height: 520px;
+  }
   @include col;
   @include size(2.5);
   @include size-Xlarge(2.5);
@@ -32,11 +36,19 @@
 .slider {
   position: relative;
   &__item {
+    @include from(1024px){
+      height: 520px;
+    }
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     display: flex;
     align-items: flex-end;
+    color: inherit;
+    &:hover{
+      text-decoration: none;
+      color: inherit;
+    }
     & + & {
       display: none;
     }
@@ -226,6 +238,20 @@
   }
 }
 .bestsellers-owl{
+  @include from(768px){
+    .owl-stage{
+      display: flex;
+      padding-left: 6px;
+    }
+    .owl-item{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-list__item{
+      flex-grow: 1;
+    }
+  }
   &__mobile-item{
     display: flex;
     border: 1px solid #DCEAFD;
@@ -387,4 +413,20 @@
 }
 .our-clients-owl{
   box-shadow: 0 10px 30px rgba(118,173,255,0.18);
+  .owl-stage{
+    display: flex;
+    padding-left: 6px;
+  }
+  .owl-item{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .our-clients__item{
+    flex-grow: 1;
+    align-items: center;
+    img{
+      margin: auto;
+    }
+  }
 }

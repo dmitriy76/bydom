@@ -115,23 +115,6 @@ $(document).ready(function () {
     $('.reset-search-mob').click(function () {
         $('.search-block-mob').toggle(200).clearQueue();
     })
-    $(window).on('load', function() {
-        $('.slider-and-product_day').liBlockSize({
-            child: '.equally'
-        });
-        $('.bestsellers-owl').liBlockSize({
-            child: '.product-list__name'
-        });
-        $('.bestsellers-owl').liBlockSize({
-            child: '.product-list__item'
-        });
-        $('.our-clients-owl').liBlockSize({
-            child: '.our-clients__item'
-        });
-        $('.partners-owl').liBlockSize({
-            child: '.our-clients__item'
-        });
-    });
 
     /* Слайдер на главной - большой*/
     $('.slider').owlCarousel({
@@ -527,6 +510,14 @@ $(document).ready(function () {
             $(this).addClass('active');
         })
     });
+
+    // Call polyfill to fit in images
+    (function () {
+        objectFit.polyfill({
+            selector: '.product-list__image > img',
+            fittype: 'contain'
+        });
+    }());
 });
 
 /* Запуск каресели на странице Сравнения для Mobile */
