@@ -252,9 +252,12 @@
     color: #68A5FF;
     margin-bottom: 0;
     min-height: 50px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #fff;
+    padding: 5px 0;
   }
   .custom-prev-btn{
     width: 30px;
@@ -269,6 +272,7 @@
       background: url("../images/compare-slider-arrow.svg") 0 0 no-repeat;
       width:8px;
       height:13px;
+      display: inline-block;
     }
     span{
       display: none;
@@ -287,6 +291,7 @@
       background: url("../images/compare-slider-arrow.svg") 0 -13px no-repeat;
       width:8px;
       height:13px;
+      display: inline-block;
     }
     span{
       display: none;

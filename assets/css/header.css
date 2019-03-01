@@ -1559,6 +1559,10 @@ textarea[placeholder]:focus:-ms-input-placeholder {
   width: 83px;
 }
 
+.header-mobile__logo img {
+  height: 19px;
+}
+
 .hamb {
   display: block;
   vertical-align: top;

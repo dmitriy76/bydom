@@ -232,6 +232,11 @@
     margin-bottom: 30px;
   }
 }
+.map-wrap{
+  @include medium-block{
+    display: none;
+  }
+}
 .map-block{
   height: 550px;
   @include medium-block{
