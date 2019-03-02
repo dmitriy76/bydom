@@ -417,10 +417,13 @@
     text-align: center;
     margin-bottom: 30px;
     height: 200px;
+    line-height: 200px;
     &>img{
-      object-fit: contain;
-      font-family: 'object-fit: contain';
-      height: 200px;
+      max-height: 100%;
+      width: auto;
+    }
+    &>:not(img){
+      line-height: 1.3;
     }
   }
   &__name{
