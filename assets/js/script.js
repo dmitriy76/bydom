@@ -510,14 +510,6 @@ $(document).ready(function () {
             $(this).addClass('active');
         })
     });
-
-    // Call polyfill to fit in images
-    (function () {
-        objectFit.polyfill({
-            selector: '.product-list__image > img',
-            fittype: 'contain'
-        });
-    }());
 });
 
 /* Запуск каресели на странице Сравнения для Mobile */
