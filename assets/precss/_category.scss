@@ -37,6 +37,13 @@
     flex-grow: 1;
     flex-basis: 70px;
   }
+  input{
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
 }
 .filter{
   &-label{

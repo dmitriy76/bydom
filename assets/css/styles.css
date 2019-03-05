@@ -635,6 +635,15 @@
   flex-basis: 70px;
 }
 
+.number-inputs input {
+  -moz-appearance: textfield;
+}
+
+.number-inputs input::-webkit-outer-spin-button,
+.number-inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .filter-label {
   font-family: 'DINAlternate';
   font-size: 14px;
