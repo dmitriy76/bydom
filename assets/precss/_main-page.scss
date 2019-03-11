@@ -47,6 +47,7 @@
   }
   .owl-stage{
     flex-grow: 1;
+    display: flex;
   }
   .owl-item{
     min-height: 100%;
@@ -55,9 +56,6 @@
     flex-grow: 1;
   }
   &__item {
-    @include from(1024px){
-      min-height: 520px;
-    }
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

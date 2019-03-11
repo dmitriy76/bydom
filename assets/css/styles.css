@@ -115,6 +115,11 @@
   -moz-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .slider .owl-item {
@@ -4878,12 +4883,6 @@
 @media screen and (min-width: 992px) {
   .visible-two-column {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .slider__item {
-    min-height: 520px;
   }
 }
 
