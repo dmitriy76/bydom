@@ -186,6 +186,7 @@
   .product-top__left{
     display: flex;
     align-items: flex-start;
+    padding: 10px 0;
   }
 }
 .product-full-label-wrap{
@@ -318,6 +319,7 @@
 .product{
   &-button{
     display: flex;
+    margin-top: 15px;
     @include medium-block{
       position: fixed;
       bottom: 0;
@@ -400,7 +402,6 @@
 .cheaper{
   font-size: 12px;
   display: inline-block;
-  margin-bottom: 15px;
 }
 .product-full{
   &__price{
@@ -420,6 +421,7 @@
   }
 }
 .installment-plan-table{
+  width: 100%;
   margin: 20px 0;
   border-bottom: 1px solid $blue-border;
   th{
@@ -818,7 +820,7 @@
     @include din;
     font-size: 16px;
     line-height: 19px;
-    padding: 20px;
+    padding: 20px 14px;
     span{
       display: block;
       font-size: 12px;
@@ -835,7 +837,7 @@
     color: #AF9B1F;
     font-size: 16px;
     line-height: 19px;
-    padding: 20px;
+    padding: 20px 14px;
     text-align: left;
     span{
       display: block;

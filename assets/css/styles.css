@@ -625,14 +625,13 @@
 
 .number-inputs > label {
   width: 50%;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -moz-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-basis: 70px;
-  -ms-flex-preferred-size: 70px;
-  flex-basis: 70px;
+}
+
+.number-inputs > label + label {
+  width: -webkit-calc(50% + 1px);
+  width: -moz-calc(50% + 1px);
+  width: calc(50% + 1px);
+  margin-left: -1px;
 }
 
 .number-inputs input {
@@ -642,6 +641,11 @@
 .number-inputs input::-webkit-outer-spin-button,
 .number-inputs input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.number-inputs input:focus {
+  position: relative;
+  z-index: 1;
 }
 
 .filter-label {
@@ -1874,6 +1878,7 @@
   -moz-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  padding: 10px 0;
 }
 
 .product-full-label-wrap {
@@ -2024,6 +2029,7 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 15px;
 }
 
 .product__add-in-cart {
@@ -2094,7 +2100,6 @@
 .cheaper {
   font-size: 12px;
   display: inline-block;
-  margin-bottom: 15px;
 }
 
 .product-full__price {
@@ -2116,6 +2121,7 @@
 }
 
 .installment-plan-table {
+  width: 100%;
   margin: 20px 0;
   border-bottom: 1px solid #DCEAFD;
 }
@@ -2497,7 +2503,7 @@
   font-family: 'DINAlternate';
   font-size: 16px;
   line-height: 19px;
-  padding: 20px;
+  padding: 20px 14px;
 }
 
 .profit-owl__sum span {
@@ -2516,7 +2522,7 @@
   color: #AF9B1F;
   font-size: 16px;
   line-height: 19px;
-  padding: 20px;
+  padding: 20px 14px;
   text-align: left;
 }
 
