@@ -34,14 +34,20 @@
   flex-wrap: wrap;
   &>label{
     width: 50%;
-    flex-grow: 1;
-    flex-basis: 70px;
+    & + label{
+      width: calc(50% + 1px);
+      margin-left: -1px;
+    }
   }
   input{
     -moz-appearance: textfield;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
+    }
+    &:focus{
+      position: relative;
+      z-index: 1;
     }
   }
 }

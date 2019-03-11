@@ -16,14 +16,14 @@
   @include size(7.5);
   @include size-Xlarge(7.5);
   @include size-large(10);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   @include large-block{
     margin-bottom: 20px;
   }
 }
 .product_day {
-  @include from(1024px){
-    min-height: 520px;
-  }
   @include col;
   @include size(2.5);
   @include size-Xlarge(2.5);
@@ -35,14 +35,34 @@
 }
 .slider {
   position: relative;
+  flex-direction: column;
+  flex-grow: 1;
+  &.owl-carousel.owl-loaded{
+    display: flex;
+  }
+  .owl-stage-outer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .owl-stage{
+    flex-grow: 1;
+  }
+  .owl-item{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   &__item {
     @include from(1024px){
-      height: 520px;
+      min-height: 520px;
     }
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     display: flex;
+    flex-grow: 1;
     align-items: flex-end;
     color: inherit;
     &:hover{
@@ -53,7 +73,7 @@
       display: none;
     }
     @include medium-block{
-      height: 320px !important;
+      min-height: 320px;
     }
   }
   &-text {

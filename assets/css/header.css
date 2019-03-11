@@ -877,6 +877,8 @@ textarea[placeholder]:focus:-ms-input-placeholder {
   display: none;
   padding: 18px 20px 8px;
   background: #ffffff;
+  -webkit-box-shadow: 0 10px 30px rgba(118, 173, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(118, 173, 255, 0.18);
   font-family: 'DINAlternate';
   z-index: 4;
 }
@@ -974,6 +976,11 @@ textarea[placeholder]:focus:-ms-input-placeholder {
   border-style: solid;
   border-width: 3px 2px 0 2px;
   border-color: #3b3b3b transparent transparent transparent;
+}
+
+.priority-nav__dropdown {
+  -webkit-box-shadow: 0 10px 30px rgba(118, 173, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(118, 173, 255, 0.18);
 }
 
 .nav__dropdown {

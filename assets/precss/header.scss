@@ -147,6 +147,7 @@
     display: none;
     padding: 18px 20px 8px;
     background: #ffffff;
+    @include box-shadow;
     @include din;
     z-index: 4;
     &.active{
@@ -227,6 +228,9 @@
     border-width: 3px 2px 0 2px;
     border-color: #3b3b3b transparent transparent transparent;
   }
+}
+.priority-nav__dropdown{
+  @include box-shadow;
 }
 .nav__dropdown{
   width: 200px;
