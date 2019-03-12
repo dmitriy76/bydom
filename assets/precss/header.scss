@@ -864,6 +864,29 @@ body{
     }
   }
 }
+.mobile-menu{
+  &__parent-div{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'DINAlternate';
+    border-bottom: 1px solid #EAEEF5;
+    display: flex;
+    justify-content: space-between;
+    a{
+      color: #737373;
+      display: block;
+      padding: 14px 0 13px 20px;
+      flex-grow: 1;
+    }
+  }
+  &__parent-icon{
+    display: inline-block;
+    content: '';
+    width: 40px;
+    min-height: 40px;
+    background: url(../images/arrow-right.svg) center center no-repeat;
+  }
+}
 .mobile-submenu{
   position: fixed;
   top: 0;

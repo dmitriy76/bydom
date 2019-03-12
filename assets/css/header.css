@@ -1819,6 +1819,42 @@ textarea[placeholder]:focus:-ms-input-placeholder {
   margin-right: 15px;
 }
 
+.mobile-menu__parent-div {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'DINAlternate';
+  border-bottom: 1px solid #EAEEF5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.mobile-menu__parent-div a {
+  color: #737373;
+  display: block;
+  padding: 14px 0 13px 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.mobile-menu__parent-icon {
+  display: inline-block;
+  content: '';
+  width: 40px;
+  min-height: 40px;
+  background: url(../images/arrow-right.svg) center center no-repeat;
+}
+
 .mobile-submenu {
   position: fixed;
   top: 0;

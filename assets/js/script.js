@@ -93,9 +93,13 @@ jQuery.fn.liBlockSize = function(options){
 $(document).ready(function () {
     $("iframe[src*='youtube.com']").wrap("<div class='videoadapt'></div>");
     $(".videoadapt").wrap("<div class='videoadapt-wrap'></div>");
-    $('.mobile-menu__first-li.parent').click(function(){
-        $(this).toggleClass('active');
+    $('.mobile-menu__parent-icon').click(function(){
+        $(this).parents('.mobile-menu__first-li.parent').toggleClass('active');
     });
+    $('.mobile-menu__first-li.back').click(function(){
+        $(this).parents('.mobile-menu__first-li.parent').removeClass('active');
+    });
+
     $('.search-click').click(function(){
         $('.search-block').toggle(200).clearQueue();
         $(this).toggleClass('active');
