@@ -148,7 +148,10 @@
     background: #ffffff;
     padding: 30px 30px 20px;
     z-index: 2;
-    width: 340px;
+    width: 50vw;
+    max-width: 500px;
+    overflow-y: auto;
+    max-height: 50vh;
     @include box-shadow;
     @include Xlarge-block{
       padding: 20px 20px 10px;
@@ -166,7 +169,6 @@
         @include size(5);
         @include size-Xlarge(5);
         word-wrap: normal;
-        white-space: nowrap;
         margin-top: 0 !important;
         margin-bottom: 9px;
       }
@@ -410,7 +412,9 @@
   }
   &__link{
     padding: 30px 30px 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     margin-bottom: 30px;
     background: #ffffff;
     @include Xlarge-block{
@@ -467,9 +471,9 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 5px;
+    margin-top: auto;
   }
   &__bottom{
-    margin-top: auto;
     display: flex;
   }
 }
@@ -660,6 +664,7 @@
     .product-list__link{
       display: flex;
       width: 66%;
+      flex-direction: row;
     }
     .product-list__bottom{
       margin-top: 50px;
